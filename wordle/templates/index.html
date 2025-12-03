@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna's Knockoff Wordle</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <div id="guessContainer"></div>
+    <div id="keyboard"></div>
+    <div class="other-buttons">
+    <button class="key enter" id="submitGuess">Enter</button>
+    <button class="key backspace" id="backspaceButton">Backspace</button></div>
+    <script>
+        window.WORD_LENGTH = {{ word_length }};
+        window.MAX_ATTEMPTS = {{ max_attempts }};
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
